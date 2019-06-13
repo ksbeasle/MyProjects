@@ -1,27 +1,48 @@
+import java.util.Scanner;
 public class AlternateMod {
 
 
+    /*
+    Interview question: What if '%' did not exist, write a function on how you
+    would achieve a mod.
+    */
 
-    public static int mod(int a, int b){
-        int mod = a / b;
-        int x = mod * b;
-        int y = x - b;
-        System.out.println(y);
-        return y;
+
+    static  int mod(int divisor, int dividend){
+        int quotient = 0;
+        int nDividend=0;
+        int remainder = 0;
+        do{
+            quotient = dividend / divisor;
+            nDividend = quotient * divisor;
+            remainder = dividend - nDividend;
+            System.out.println("Remainder: " + remainder);
+        }
+        while(divisor < remainder);  
+        
+        return remainder;
     }
+
+
+    
 
 
 
     public static void main(String args[]){
-        int a = 4;
-        int b = 10;
-        mod(a,b);
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter a number to be the Divisor: ");
+        int divisor = scan.nextInt();
+        System.out.println("Enter a number to be the Dividend: ");
+        int dividend = scan.nextInt();
+        mod(divisor,dividend);
+
+        /*
+        if(mod(divisor, dividend) == (dividend%divisor)){
+            System.out.println("Correct");
+        }else{
+            System.out.println("Incorrect");
+        }
+        */
     }
 }
 
-/* 
-         2r2   
-    4 |---
-      | 10
-         8  
-*/      
