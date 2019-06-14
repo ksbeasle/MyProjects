@@ -8,7 +8,7 @@ public class AlternateMod {
     */
 
 
-    static  int mod(int divisor, int dividend){
+    static int mod(int divisor, int dividend){
         int quotient = 0;
         int nDividend=0;
         int remainder = 0;
