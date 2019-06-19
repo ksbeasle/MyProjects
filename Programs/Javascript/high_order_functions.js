@@ -1,3 +1,5 @@
+/* https://www.youtube.com/watch?v=rRgD1yVwIvE */
+
 const games = [
 {title: "Assassins Creed Oddyssey", genre: "RPG", rating: 10, platform: "X1" },
 {title: "NBA 2k19", genre: "Sports", rating: 1, platform: "X1" },
