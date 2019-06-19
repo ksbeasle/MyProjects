@@ -1,9 +1,10 @@
+
 const getTodo = () => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            let error = true
+            let error = false
             if(!error){
-                resolve({ text: "Complete code" })
+                resolve({ text: "Promise resolved" })
             }else{
                 reject()
             }
@@ -24,7 +25,3 @@ async function fetchTodo(){
 fetchTodo()
 .then(todo => console.log(todo.text))
 .catch(() => console.log("Error Occurred!"))
-
-
-
-
