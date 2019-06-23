@@ -1,8 +1,0 @@
-DROP TABLE HonorableMentions
-DROP TABLE Mobile
-DROP TABLE platforms
-DROP TABLE Racing
-DROP TABLE RPG
-DROP TABLE Shooters
-DROP TABLE Sports
-DROP TABLE SurvivalHorror
