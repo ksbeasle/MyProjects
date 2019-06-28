@@ -1,11 +1,20 @@
 const express = require('express')
 const mongoose = require('mongoose')
+const bodyParser = require('body-parser')
+
 
 /* Models */
 let Game = require('./models/games')
 
 const app = express()
 const path = require('path')
+
+
+/* body-parser middleware */
+
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
+
 
 /* connect to database */
 mongoose.connect('mongodb://localhost/Games')
@@ -49,4 +58,9 @@ app.get('/games/add', (req, res) => {
     res.render('addGame', {
         title: 'Add Game'
     })
+})
+
+/* POST request */
+app.post('/games/add', (req, res) =>{
+    
 })
