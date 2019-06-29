@@ -1,17 +1,15 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
+const app = express()
+const path = require('path')
+
 
 
 /* Models */
 let Game = require('./models/games')
 
-const app = express()
-const path = require('path')
-
-
 /* body-parser middleware */
-
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
@@ -60,7 +58,20 @@ app.get('/games/add', (req, res) => {
     })
 })
 
-/* POST request */
+/* POST request -- We will grab the input from 'addGame.pug' */
 app.post('/games/add', (req, res) =>{
-    
+    let game = new Game()
+    game.title = req.body.title
+    game.genre = req.body.genre
+    game.rating = req.body.rating
+    game.comment = req.body.comment
+    game.platform = req.body.platform
+
+    game.save((err)=>{
+        if(err){
+            console.log(err)
+        } else {
+            res.redirect('/')
+        }
+    })
 })
