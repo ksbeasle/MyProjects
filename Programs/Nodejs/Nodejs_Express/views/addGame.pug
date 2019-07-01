@@ -1,0 +1,27 @@
+extends layout
+block content
+        h1 #{title}
+        form(method='POST', action='/games/add')
+            #form-group
+                label Title:
+                input.form-control(name='title', type='text')
+            
+            #form-group
+                label Genre:
+                input.form-control(name='genre', type='text')
+            
+            #form-group
+                label Rating:
+                input.form-control(name='rating', type='number')
+
+            #form-group
+                label Comment:
+                input.form-control(name='comment', type='text')
+
+            #form-group
+                label Platform:
+                input.form-control(name='platform', type='text')
+
+
+
+            input.btn.btn-primary(type='submit', value='Submit')
