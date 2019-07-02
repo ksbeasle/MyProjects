@@ -2,9 +2,22 @@ doctype html
 html
     head
         title Games
+        link(rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.css')
     body
-        block content
-        br
-        hr
-        footer
+        nav.navbar.navbar-expand-md.navbar-dark.bg-dark.fixed-top
+            .container
+                a.navbar-brand(href='/') Games  
+                #navbarsExampleDefault.collapse.navbar-collapse
+                ul.navbar-nav.mr-auto
+                    li.nav-item.active
+                        a.nav-link(href='/')
+                            | Home 
+                            span.sr-only (current)
+                    li.nav-item
+                        a.nav-link(href='/games/add') Add new Game
+        .container
+            block content
+            br
+            hr
+            footer
             p Copyright &copy; 2019

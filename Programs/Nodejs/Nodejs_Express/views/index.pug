@@ -1,6 +1,7 @@
 extends layout
 block content
         h1 #{title}
-        ul
+        ul.list-group
             each game, i in games
-                li #{game.title}
+                li.list-group-item 
+                    a(href="/games/" + game._id)= game.title

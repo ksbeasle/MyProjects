@@ -77,3 +77,12 @@ app.post('/games/add', (req, res) =>{
         }
     })
 })
+
+/*  */
+app.get('/games/:id', (req, res) => {
+    Game.findById(req.params.id, (err, game) => {
+        res.render('gameInfo', {
+            game:game
+        })
+    })
+})
