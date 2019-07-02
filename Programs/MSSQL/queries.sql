@@ -38,3 +38,33 @@ SELECT REPLACE(Title, 'Forza Motorsport 7', 'Test') FROM Racing WHERE Title = 'F
 
 /* Select the title and genre from Survival Horror table into one column */
 SELECT CONCAT(Title, Genre) AS 'Game :: Genre' FROM SurvivalHorror;
+
+/* Display all titles ordered by rating ascending */
+SELECT * FROM RPG ORDER BY Rating ASC;
+
+/* Display all titles ordered by rating ascending and title descending */
+SELECT * FROM Shooters ORDER BY Rating asc, Title Desc;
+
+/* Select specific titles (Fallout 4, Witcher 3) from the RPG table */
+SELECT * FROM RPG WHERE Title IN('Fallout 4', 'Witcher 3');
+
+/* Select all titles EXCEPT for (Fallout 4, Witcher 3) from the RPG table */
+SELECT * FROM RPG WHERE Title NOT IN('Fallout 4', 'Witcher 3');
+
+/* Select titles with rating = 10 with name as "Elite" */
+SELECT Title AS 'Elite' FROM Shooters WHERE Rating = 10;
+
+/* Select all Titles that have the Genre "Racing" */
+SELECT * FROM Racing WHERE Genre LIKE '%Racing%';
+
+/* Select titles that end with the letter "d" */
+SELECT * FROM Mobile Where Title LIKE '%d';
+
+/* Select titles that end with the letter "d" and contain 2 letters */
+SELECT * FROM Sports Where Title Like '__d';
+
+/* Select titles with a rating is between 8 and 10 */
+SELECT * FROM Mobile WHERE Rating BETWEEN 8 AND 10;
+
+/* Select titles that are Rated 10 */
+SELECT * FROM Mobile WHERE Rating = 10;
