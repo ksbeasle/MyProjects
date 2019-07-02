@@ -68,3 +68,9 @@ SELECT * FROM Mobile WHERE Rating BETWEEN 8 AND 10;
 
 /* Select titles that are Rated 10 */
 SELECT * FROM Mobile WHERE Rating = 10;
+
+/* Fetch COUNT for platform ID that = 2 from Racing table */
+SELECT COUNT(*) AS 'Platform' FROM Racing WHERE gamePlatformID = 3;
+
+/* Select Titles of games with rating <= 8 */
+SELECT * FROM Racing WHERE Rating <= 8;
