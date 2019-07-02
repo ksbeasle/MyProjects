@@ -1,6 +1,6 @@
-const test = ["test", "press", "test1", "another press", "third", "press"]
+const arr = ["print", "press", "printing press", "benchpress", "Hello", "World"]
 
-
+/* Search through the array for the word "press" and output it into another array */
 const isItThere = (arr) => {
     var newArr = []
     for(var i = 0; i < arr.length; i++){
@@ -13,4 +13,4 @@ const isItThere = (arr) => {
     return newArr
 }
 
-console.log(isItThere(test))
+console.log(isItThere(arr))
