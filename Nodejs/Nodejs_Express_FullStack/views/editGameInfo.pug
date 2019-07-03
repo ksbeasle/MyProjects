@@ -1,0 +1,29 @@
+extends layout
+block content
+        br
+        br
+        h1 #{title}
+        form(method='POST', action='/games/edit/'+game._id)
+            #form-group
+                label Title:
+                input.form-control(name='title', type='text', value=game.title)
+            
+            #form-group
+                label Genre:
+                input.form-control(name='genre', type='text', value=game.genre)
+            
+            #form-group
+                label Rating:
+                input.form-control(name='rating', type='number', value=game.rating)
+
+            #form-group
+                label Comment:
+                input.form-control(name='comment', type='text', value=game.comment)
+
+            #form-group
+                label Platform:
+                input.form-control(name='platform', type='text', value=game.platform)
+
+
+
+            input.btn.btn-primary(type='submit', value='Submit')

@@ -78,11 +78,40 @@ app.post('/games/add', (req, res) =>{
     })
 })
 
-/*  */
+/* GET request -- Retrieve a single game based on the id */
 app.get('/games/:id', (req, res) => {
     Game.findById(req.params.id, (err, game) => {
         res.render('gameInfo', {
             game:game
         })
+    })
+})
+
+/* GET request -- Retrieve a single game based on the id */
+app.get('/games/edit/:id', (req, res) => {
+    Game.findById(req.params.id, (err, game) => {
+        res.render('editGameInfo', {
+            game:game
+        })
+    })
+})
+
+/* UPDATE request -- We will edit the game */
+app.post('/games/edit/:id', (req, res) =>{
+    let game = {}
+    game.title = req.body.title
+    game.genre = req.body.genre
+    game.rating = req.body.rating
+    game.comment = req.body.comment
+    game.platform = req.body.platform
+
+    let query = {_id:req.params.id}
+
+    Game.update(query, game, (err)=>{
+        if(err){
+            console.log(err)
+        } else {
+            res.redirect('/')
+        }
     })
 })
