@@ -1,9 +1,15 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const BodyParser = require("body-parser");
+const path = require('path')
 const app = express()
+
 app.use(BodyParser.json());
 app.use(BodyParser.urlencoded({ extended: true }));
+
+
+app.set('views', path.join(__dirname, 'views'))
+app.set('view engine', 'pug')
 
 mongoose.connect("mongodb://localhost/AllGames", { useNewUrlParser: true })
 let db = mongoose.connection
@@ -31,8 +37,16 @@ var games = mongoose.model('games', gameSchema)
 
 
 
-app.get('/', (req, res) => {
-    
+app.get('/', (err, res) => {
+    games.find({}, (err, games) =>{
+        if(err){
+            console.log(err)
+        }else{
+        res.render('index', {
+            games: games
+        })
+    }
+    })
     
 })
 
