@@ -5,7 +5,7 @@ function factorialize(num) {
       return 1
     }else{
     
-    for(let i = 1; i < num + 1; i++){
+    for(let i = 1; i <= num; i++){
       factNum = factNum * i;
     }
     }
