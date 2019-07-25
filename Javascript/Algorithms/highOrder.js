@@ -7,7 +7,9 @@ const squareList = (arr) => {
  for example, when we reach 5.6 it will look like (5.6 % 5) and this will NOT equal 0 so we will remove it from our new array and continue on
  We will then 'map' the num and raise all those values by a power of 2
  */
-  let squaredIntegers = realNumberArray.filter((num) => num > 0 && num % parseInt(num) == 0).map((num) => num ** 2)
+  let squaredIntegers = realNumberArray
+  .filter((num) => num > 0 && num % parseInt(num) == 0)
+  .map((num) => num ** 2)
 
 
   return squaredIntegers;

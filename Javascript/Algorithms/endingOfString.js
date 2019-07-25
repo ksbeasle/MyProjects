@@ -6,6 +6,7 @@ So 7 - 1 = 6 so we start slicing at index 6 which will leave "n" and will return
 
 function confirmEnding(str, target) {
     let test = str.slice(str.length - target.length)
+    console.log(test)
     if(test == target){
       return true
     }else{
