@@ -1,0 +1,22 @@
+{
+    "Cars":[
+        {
+            "Model":"Challenger",
+            "Make": "Dodge",
+            "Trim":"RT Classic",
+            "Year":2013
+        },
+        {
+            "Model":"Mustang",
+            "Make": "Ford",
+            "Trim":"V6","Year":2015
+        },
+        {
+            "Model":"Camaro",
+            "Make":"Chevrolet",
+            "Trim":"SS",
+            "Year": 2015
+        }
+    ]
+
+}

@@ -1,9 +1,13 @@
 function binaryAgent(str) {
+    /* split the string so we can get an array  */
     str = str.split(" ")
     let message = ""
     for(let i = 0; i < str.length; i++){
+        /* convert from binary to decimal */
       let convertMe = parseInt(str[i], 2)
+      /* Now we convert the decimal into a character */
       let pushMe = String.fromCharCode(convertMe)
+      /* concat the character onto our message string */
       message += pushMe
     }
     console.log(message)

@@ -1,0 +1,9 @@
+#about {
+    background-color: teal;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    margin-left: -50px;
+}
