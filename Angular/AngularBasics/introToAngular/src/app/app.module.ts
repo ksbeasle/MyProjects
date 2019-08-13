@@ -5,7 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TemplateExpressionComponent } from './template-expression/template-expression.component';
 import { PropertyBindingComponent } from './property-binding/property-binding.component';
-import { ComponentBindingComponent } from './component-binding/component-binding.component';
+import { ImagesForBindingComponent } from './images-for-binding/images-for-binding.component';
+
 
 
 @NgModule({
@@ -13,7 +14,7 @@ import { ComponentBindingComponent } from './component-binding/component-binding
     AppComponent,
     TemplateExpressionComponent,
     PropertyBindingComponent,
-    ComponentBindingComponent
+    ImagesForBindingComponent
   ],
   imports: [
     BrowserModule,

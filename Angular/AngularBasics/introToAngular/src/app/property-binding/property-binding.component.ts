@@ -1,24 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+ 
 
 @Component({
   selector: 'propBinding',
-  template: `
-  <div>
-    <img [src]="imageURL" id="img">
-  </div>`,
+  templateUrl: './property-binding.component.html',
   styleUrls: ['./property-binding.component.css']
 })
-export class PropertyBindingComponent implements OnInit {
+export class PropertyBindingComponent {
 
-  imageURL = "./images/boston.png"
-  
+  public isDisabled = true;
 
-  constructor() { 
-    
-    setInterval( () => this.imageURL = "./images/cardinals.jpg", 10000)
-  }
-
-  ngOnInit() {
-  }
+  constructor() { }
 
 }
