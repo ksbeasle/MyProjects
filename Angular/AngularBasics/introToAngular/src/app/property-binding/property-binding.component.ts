@@ -10,6 +10,16 @@ export class PropertyBindingComponent {
 
   public isDisabled = true;
 
+  enable(event: Event){
+    console.log('enabled...', event)
+    this.isDisabled = false
+  }
+
+  disable(event: Event){
+    console.log('disabled...', event)
+    this.isDisabled = true
+  }
+
   constructor() { }
 
 }
