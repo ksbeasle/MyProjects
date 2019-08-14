@@ -9,17 +9,26 @@
     <title>jQuery Basics</title>
 </head>
 <body>
-    <div id="about">
-
-    </div>
+    <div id="about"></div>
+    <button id="show">Show</button>
+    <button id="hide">Hide</button>
+    <button id="toggle">Toggle</button>
+    <input type="text" class="power" value="">
 </body>
 </html>
 
 <script>
 
 $(document).ready(function(){
+   
     $('#about').click(function(){
-        $(this).html("you clicked me!")
+
+        if($(this).html() === 'you clicked me!'){
+            $(this).html('clicked me again!')
+        }else{
+            $(this).html("you clicked me!")
+        }
+       
     })
 
     $('#about').hover(function(){
@@ -28,6 +37,20 @@ $(document).ready(function(){
 
     $('#about').mouseleave(function(){
         $(this).css('background-color', 'blue')
+    })
+
+    $("#show").click(function(){
+        $('#about').show()
+    })
+    $("#hide").click(function(){
+        $('#about').hide()
+    })
+    $("#toggle").click(function(){
+        $('#about').toggle()
+    })
+
+    $('.power').keyup(function(){
+        $('#about').html($(this).val())
     })
 
 
