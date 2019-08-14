@@ -14,6 +14,10 @@
     <button id="hide">Hide</button>
     <button id="toggle">Toggle</button>
     <input type="text" class="power" value="">
+<br>
+<br>
+    <button id="getjson">Get Json</button>
+    <button id="getcars">Get Cars</button>
 </body>
 </html>
 
@@ -54,7 +58,21 @@ $(document).ready(function(){
     })
 
 
+    /* AJAX */
+    $('#getjson').click(function(){
+        $.ajax({url: 'cars.json',
+                success: function(result){
+                    $('#about').html(JSON.stringify(result,null,4))
+                }})
+    })
 
+    $('#getcars').click(function(){
+        $.ajax({url: 'cars.json',
+                success: function(result){
+                    var car = result.Cars[0].Model
+                    $('#about').html(car)
+                }})
+    })
 
 
 })
