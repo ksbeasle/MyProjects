@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Calculator
+    </title>
+</head>
+<body>
+    
+    <div id="calculator">
+        <table>
+                
+            <tr>
+                <td><button id="1" value=1>1</button></td><td><button id="2" value=2>2</button></td><td><button id="3" value=3>3</button></td><td><button id="add" value="+">+</button>
+            </tr>
+            <tr>
+                    <td><button id="4" value="4">4</button></td><td><button id="5" value="5">5</button></td><td><button id="6" value="6">6</button></td></td><td><button id="subtract" value="-">-</button>
+            </tr>
+            <tr>
+                    <td><button id="7" value="7">7</button></td><td><button id="8" value="8">8</button></td><td><button id="9" value="9">9</button></td></td><td><button id="divide" value="/">&#247</button>
+            </tr>
+            <tr>
+                    <td><button id="0" value="0">0</button></td><td><button id="point" value=".">.</button></td><td><button id="equal" value="=">=</button></td></td><td><button id="multiply" value="*">x</button></td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="output">
+        <input id="calculate" type="text" >
+    </div>
+
+    <div id="delete">
+        <button id="clear">Clear</button>
+    </div>
+
+</body>
+
+
+<script>
+   $(document).ready(function(){
+       
+       let compute = []
+       let value = 0
+       let answer = 0
+
+    $("#1").click(function(){
+        $('#calculate').val($('#calculate').val()+$(this).val());
+    })
+
+    $("#2").click(function(){
+        $('#calculate').val($('#calculate').val()+$(this).val());
+    })
+
+    $("#3").click(function(){
+        $('#calculate').val($('#calculate').val()+$(this).val());
+    })
+
+    $("#4").click(function(){
+        $('#calculate').val($('#calculate').val()+$(this).val());
+    })
+
+    $("#5").click(function(){
+        $('#calculate').val($('#calculate').val()+$(this).val());
+    })
+
+    $("#6").click(function(){
+        $('#calculate').val($('#calculate').val()+$(this).val());
+    })
+
+    $("#7").click(function(){
+        $('#calculate').val($('#calculate').val()+$(this).val());
+    })
+
+    $("#8").click(function(){
+        $('#calculate').val($('#calculate').val()+$(this).val());
+    })
+
+    $("#9").click(function(){
+        $('#calculate').val($('#calculate').val()+$(this).val());
+    })
+
+    $("#0").click(function(){
+        $('#calculate').val($('#calculate').val()+$(this).val());
+    })
+
+    $("#point").click(function(){
+        $('#calculate').val($('#calculate').val()+$(this).val());
+    })
+
+    $("#clear").click(function(){
+        $("#calculate").val("")
+        calc = ""
+        compute = []
+        value = 0
+        answer = 0
+        console.log(calc)
+        console.log(compute)
+        console.log(value)
+        console.log(answer)
+
+    })
+
+    $("#equal").click(function(){
+        compute.push($("#calculate").val())
+        let test = compute.length[2]
+        console.log(compute)
+        console.log(test)
+        
+        /* reset calculation */
+        $("#calculate").val("")
+        compute = []
+        value = 0
+        answer = 0
+    
+    })
+
+    $("#multiply").click(function(){
+        let convertMe = $("#calculate").val()
+        value = parseInt(convertMe)
+        compute.push(value)
+        compute.push("*")
+        
+        /* reset calculation */
+        $("#calculate").val("")
+        calc = ""
+    })
+
+    $("#add").click(function(){
+        
+        let convertMe = $("#calculate").val()
+        value = parseInt(convertMe)
+        compute.push(value)
+        compute.push("+")
+        console.log(compute)
+        /* reset calculation */
+        $("#calculate").val("")
+        calc = ""
+    })
+
+    $("#subtract").click(function(){
+        let convertMe = $("#calculate").val()
+        value = parseInt(convertMe)
+        compute.push(value)
+        compute.push("-")
+        console.log(compute)
+        /* reset calculation */
+        $("#calculate").val("")
+        calc = ""
+    })
+
+    $("#divide").click(function(){
+        let convertMe = $("#calculate").val()
+        value = parseInt(convertMe)
+        compute.push(value)
+        compute.push("/")
+        console.log(compute)
+        /* reset calculation */
+        $("#calculate").val("")
+        calc = ""
+    })
+
+
+   })
+
+</script>
+</html>
