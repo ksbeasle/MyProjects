@@ -104,10 +104,10 @@
     })
 
     $("#equal").click(function(){
-        compute.push($("#calculate").val())
-        let test = compute.length[2]
+        let convertMe = $("#calculate").val()
+        value = parseInt(convertMe)
+        compute.push(value)
         console.log(compute)
-        console.log(test)
         
         /* reset calculation */
         $("#calculate").val("")
