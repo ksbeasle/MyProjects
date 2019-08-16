@@ -107,8 +107,17 @@
         let convertMe = $("#calculate").val()
         value = parseInt(convertMe)
         compute.push(value)
+
+        let val = compute[compute.length-1]
+        let checkMe = isNaN(val)
+
+        if(checkMe == true){
+            compute.pop()
+            compute.pop()
+        }
         console.log(compute)
-        
+
+/* Work on looping through array and add/sub/div etc to get an answer */
         /* reset calculation */
         $("#calculate").val("")
         compute = []
