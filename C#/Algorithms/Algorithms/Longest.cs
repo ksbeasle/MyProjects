@@ -9,18 +9,32 @@ namespace Algorithms
 
         public static string longestStr(string s1, string s2)
         {
-            int s1Count = 0;
-            int s2Count = 0;
+            ArrayList al = new ArrayList();
+            
 
-            for(int i = 0; i < s1.Length; i++)
+            foreach(var item in s1)
             {
-                var tmp = s1[i];
-                if (s1.IndexOf(tmp) < 0)
+                if (!al.Contains(item))
                 {
-                    s1Count++;
+                    al.Add(item);
                 }
             }
-            return "";
+
+            foreach (var item in s2)
+            {
+                if (!al.Contains(item))
+                {
+                    al.Add(item);
+                }
+            }
+            al.Sort();
+            string newSortedStr = "";
+            foreach(var item in al)
+            {
+                newSortedStr += item;
+            }
+
+            return newSortedStr;
         }
     }
 }
