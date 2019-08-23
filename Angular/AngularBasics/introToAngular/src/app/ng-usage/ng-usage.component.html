@@ -1,0 +1,24 @@
+<div>
+    <h1>ngFor and ngIf Example:</h1>
+    <h3>ngFor and ngIf are also known as directives</h3>
+    <h4>The Data below is being populated by the app root component that is passing data via [] into this component</h4>
+    <p>Title: {{game.title}}</p>
+    <p>ESRB: {{game.esrb}}</p>
+    <p>Genre: {{game.genre}}</p>
+    <p>Rating: {{game.rating}}</p>
+    <p>*ngFor="" is being used below</p>
+    <button (click)="toggleButton()">Expand/Collapse</button>
+    <div *ngIf="!isCollapsed">
+        <p *ngFor="let item of game.arr">{{item}}</p>
+    </div>
+    
+
+    <p>*ngIf="" is being used below to hide an element since the array is empty so there is no reason to 
+        display it.
+    </p>
+    <div *ngIf="game.emptyArr.length > 0">
+        <p>Don't display me!</p>
+    </div>
+    
+
+</div>

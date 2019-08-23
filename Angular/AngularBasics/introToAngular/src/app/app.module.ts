@@ -8,6 +8,10 @@ import { TemplateExpressionComponent } from './template-expression/template-expr
 import { PropertyBindingComponent } from './property-binding/property-binding.component';
 import { EventBindingComponent } from './event-binding/event-binding.component';
 import { TwoWayDataBindComponent } from './two-way-data-bind/two-way-data-bind.component';
+import { NgUsageComponent } from './ng-usage/ng-usage.component';
+import { ViewModule } from './view/view.module';
+import { TestService } from './test.service';
+
 
 
 
@@ -18,14 +22,18 @@ import { TwoWayDataBindComponent } from './two-way-data-bind/two-way-data-bind.c
     TemplateExpressionComponent,
     PropertyBindingComponent,
     EventBindingComponent,
-    TwoWayDataBindComponent
+    TwoWayDataBindComponent,
+    NgUsageComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ViewModule
   ],
-  providers: [],
+  //services created go into the providers array
+  providers: [TestService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
