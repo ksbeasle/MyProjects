@@ -32,6 +32,11 @@
         <input id="calculate" type="text" >
     </div>
 
+    <div>
+        <p>ANSWER</p>
+        <input id="answer" type="text">
+    </div>
+
     <div id="delete">
         <button id="clear">Clear</button>
     </div>
@@ -104,6 +109,8 @@
     })
 
     $("#equal").click(function(){
+        let op = []
+        let nums = []
         let convertMe = $("#calculate").val()
         value = parseInt(convertMe)
         compute.push(value)
@@ -115,9 +122,52 @@
             compute.pop()
             compute.pop()
         }
-        console.log(compute)
+        console.log("FINAL ARRAY: "+compute)
+
+        
 
 /* Work on looping through array and add/sub/div etc to get an answer */
+        for(let i = 0; i < compute.length; i++){
+            if(compute[i] == '+' || compute[i] == '*' || compute[i] == '-' || compute[i] == '/'){
+                op.push(compute[i])
+            }else{
+                nums.push(compute[i])
+            }  
+        }
+        console.log(op)
+        console.log(nums)
+        // [++]
+        // [22]
+        if(op.length > nums.length){
+            let size = op.length
+        }else{
+            size = nums.length
+        }
+        let lastOp = ""
+        for(let i = 0; i <= size; i++){
+            
+            if(op.length == 0){
+                if(lastOp == '+'){
+                    answer += nums[0]
+                    nums.shift()
+                    lastOp = ""
+                }
+            }
+            if(op[0] === '+'){
+                answer += nums[0]
+                lastOp = '+'
+                op.shift()
+                nums.shift()
+            }
+            
+        }
+        console.log("ANSWER HERE: " + answer)
+        console.log("OP "+op)
+        console.log("nums "+nums)
+
+        
+
+        $("#answer").val(answer)
         /* reset calculation */
         $("#calculate").val("")
         compute = []
