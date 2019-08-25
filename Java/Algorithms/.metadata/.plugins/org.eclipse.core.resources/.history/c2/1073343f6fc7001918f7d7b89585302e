@@ -1,0 +1,28 @@
+package uniteUnique;
+
+import java.util.ArrayList;
+
+public class uniteUnique {
+
+	
+	public static ArrayList<Integer> uniteUniqu(int arr1[], int arr2[], int arr3[]){
+		ArrayList<Integer> al = new ArrayList<Integer>();
+		
+		
+		return al;
+	}
+	
+	
+	
+	
+	public static void main(String[] args){
+		
+
+		
+		
+		
+		System.out.println();
+	}
+	
+	
+}

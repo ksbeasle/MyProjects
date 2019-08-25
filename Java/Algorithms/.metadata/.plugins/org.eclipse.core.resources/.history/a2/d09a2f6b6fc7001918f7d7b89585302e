@@ -1,0 +1,33 @@
+package uniteUnique;
+
+import java.util.ArrayList;
+
+public class uniteUnique {
+
+	
+	public static ArrayList<Integer> uniteUnique(int arr[][]){
+		ArrayList<Integer> al = new ArrayList<Integer>();
+		
+		
+		
+		return al;
+	}
+	
+	
+	
+	
+	public static void main(String[] args){
+		
+		int arr[][] = {{1,3,2}, {5,2,1,4}, {2,1}};
+		
+		
+		System.out.println(uniteUnique(arr));
+		
+		
+		}
+		
+		
+		
+	
+	
+}

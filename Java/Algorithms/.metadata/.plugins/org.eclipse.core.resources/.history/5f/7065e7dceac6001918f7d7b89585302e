@@ -1,0 +1,32 @@
+package validParenthesis;
+
+import java.util.Stack;
+
+public class validParentheses_V2 {
+
+	
+	public static boolean isValid(String str){
+		
+		Stack stack = new Stack();
+		
+		for(int i = 0; i < str.length(); i++){
+			System.out.println(str.charAt(i));
+		}
+		return false;
+	}
+	
+	
+	
+	public static void main(String[] args){
+		
+		
+		
+		
+		System.out.println(isValid(""));
+        System.out.println(isValid("()"));
+        System.out.println(isValid("()[]{}"));
+        System.out.println(isValid("(]"));
+        System.out.println(isValid("([)]"));
+        System.out.println(isValid("{[]}"));
+	}
+}

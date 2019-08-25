@@ -1,0 +1,15 @@
+package validParenthesis;
+
+public class validParentheses_V2 {
+
+	public static void main(String[] args){
+		
+		
+		System.out.println(sol.validParen(""));
+        System.out.println(sol.validParen("()"));
+        System.out.println(sol.validParen("()[]{}"));
+        System.out.println(sol.validParen("(]"));
+        System.out.println(sol.validParen("([)]"));
+        System.out.println(sol.validParen("{[]}"));
+	}
+}

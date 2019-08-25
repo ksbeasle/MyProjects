@@ -1,0 +1,48 @@
+package validParenthesis;
+
+public class validParenthesis {
+
+	
+	
+	
+	
+	public static boolean isValid(String str){
+		
+		int lp = 0;
+		int rp = 0;
+		
+		String s[] = str.split("");
+		
+		
+		if(s[0] == ")"){
+			return false;
+		}else if(s[s.length-1] == "("){
+			return false;
+		}
+		
+		
+		for (String item : s){
+			System.out.println(item);
+		}
+		
+		
+		
+		return false;
+	}
+	
+	
+	
+	
+	
+	
+	
+	public static void main(String[] args){
+		String test1 = "())("; //false
+		String test2 = "()()()()()()()(())()()()()"; //true
+		String test3 = "(()()))("; //false
+		String test4 = ")(()))"; //false
+		
+		System.out.println(isValid(test1));
+	}
+	
+}
