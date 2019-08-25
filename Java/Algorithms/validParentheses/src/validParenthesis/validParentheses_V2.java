@@ -1,0 +1,65 @@
+package validParenthesis;
+
+import java.util.Stack;
+
+public class validParentheses_V2 {
+
+	
+	/* Helper function that will take the character from the stack and the current character from the array and 
+	 * find a pair
+	 */
+	public static boolean matchPair(char c1, char c2){
+		if(c1 == '(' && c2 == ')'){
+			return true;
+		} else if (c1 == '[' && c2 == ']'){
+			return true;
+		} else if (c1 == '{' && c2 == '}'){
+			return true;
+		}else{
+			return false;
+		}
+	}
+	
+	
+	
+	
+	public static boolean isValid(String str){
+		//Create a stack to hold our open '(', '{', '['
+		Stack<Character> stack = new Stack<Character>();
+		char s[] = str.toCharArray();
+		//loop through the char array
+		for(int i = 0; i < s.length; i++){
+			//if we have a open parentheses, brackets, or curly brace we will push it onto the stack
+			if(s[i] == '(' || s[i] == '[' || s[i] == '{'){
+				
+				stack.push(s[i]);
+				
+				//if not we will check for a matching pair, if not match then return false
+			}  else if (!matchPair(stack.pop(), s[i])){
+					return false;
+				}
+			
+		}
+		
+		//if the stack is empty then we have found all pairs if not then we return false
+		if(stack.isEmpty()){
+			return true;
+		}else{ 
+			return false;
+		}
+	}
+	
+	
+	
+	public static void main(String[] args){
+		
+		
+		System.out.println(isValid("")); 
+        System.out.println(isValid("()"));
+        System.out.println(isValid("()[]{}"));
+        System.out.println(isValid("(]"));
+        System.out.println(isValid("([)]"));
+        System.out.println(isValid("{[]}"));
+        
+	}
+}

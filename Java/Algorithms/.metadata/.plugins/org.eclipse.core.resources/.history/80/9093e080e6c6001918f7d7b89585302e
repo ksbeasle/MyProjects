@@ -1,0 +1,46 @@
+package validParenthesis;
+
+import java.util.Arrays;
+
+public class validParenthesis {
+
+	
+	
+	
+	
+	public static boolean isValid(String str){
+		
+		int lp = 0;
+		int rp = 0;
+		
+		String s[] = str.split("");
+		
+		System.out.println(Arrays.toString(s));
+		System.out.println(s[7]);
+		
+		if(s[0] == ")"){
+			return false;
+		}
+		
+		if(s[s.length-1] == "("){
+			return false;
+		}
+		return true;
+	}
+	
+	
+	
+	
+	
+	
+	
+	public static void main(String[] args){
+		String test1 = "())("; //false
+		String test2 = "()()()()()()()(())()()()()"; //true
+		String test3 = "(()()))("; //false
+		String test4 = ")(()))"; //false
+		
+		System.out.println(isValid(test3));
+	}
+	
+}

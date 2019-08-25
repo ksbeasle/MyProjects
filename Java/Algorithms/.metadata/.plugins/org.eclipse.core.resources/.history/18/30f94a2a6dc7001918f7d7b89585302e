@@ -1,0 +1,26 @@
+package uniteUnique;
+
+public class uniteUnique {
+
+	
+	public static int[] uniteUniqu(int arr[]){
+		
+		
+		
+		return arr;
+	}
+	
+	
+	
+	
+	public static void main(String[] args){
+		
+		
+		
+		
+		
+		System.out.println();
+	}
+	
+	
+}

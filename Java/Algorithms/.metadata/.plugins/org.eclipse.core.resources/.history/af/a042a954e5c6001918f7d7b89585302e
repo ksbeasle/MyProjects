@@ -1,0 +1,33 @@
+package validParenthesis;
+
+public class validParenthesis {
+
+	
+	
+	
+	
+	public static boolean isValid(String str){
+		String s[] = str.split("");
+		
+		
+		if(s[0] == ")"){
+			return false;
+		}else if(s[s.length-1] == "("){
+			return false;
+		}
+		
+		
+		return false;
+	}
+	
+	
+	
+	
+	
+	
+	
+	public static void main(String[] args){
+		
+	}
+	
+}

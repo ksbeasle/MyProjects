@@ -1,0 +1,61 @@
+package validParenthesis;
+
+
+
+public class validParentheses {
+
+	
+	
+	
+	
+	public static boolean isValid(String str){
+		//count for left parentheses and right parentheses
+		int lp = 0;
+		int rp = 0;
+		
+		
+		if(str.isEmpty()){
+			return true;
+		}
+		//checking if the beginning or ending of the string has a closed or opened parentheses
+		if(str.charAt(0) == ')'){
+			return false;
+		}else if(str.charAt(str.length()-1) == '('){
+			return false;
+		}
+		
+		//loop through and count 
+		for(int i = 0; i < str.length(); i++){
+			if(str.charAt(i) == '('){
+				lp++;
+			}else{
+				rp++;
+			}
+		}
+		//if the count is equal then return true
+		if(lp == rp){
+			return true;
+		}
+		
+		return false;
+	}
+	
+	
+	
+	
+	
+	
+	
+	public static void main(String[] args){
+		String test1 = "())("; //false
+		String test2 = "()()()()()()()(())()()()()"; //true
+		String test3 = "(()()))("; //false
+		String test4 = ")(()))"; //false
+		
+		System.out.println(isValid(test1));
+		System.out.println(isValid(test2));
+		System.out.println(isValid(test3));
+		System.out.println(isValid(test4));
+	}
+	
+}
