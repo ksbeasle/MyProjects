@@ -7,17 +7,10 @@ For example, ["hello", "Hello"], should return true because
 
  Since I am only taking two words at a time I make both lowercase for easier comparison
 */
-
-let count = 0;
-var word1 = arr[0].toLowerCase()
-var word2 = arr[1].toLowerCase()
-for(let i = 0; i < word2.length; i++){
-    /*with the use of indexOf() it will return the index so in this case 
-    if we get -1 that means that we werent able to find the same letter so we return false
-    otherwise return true
-    */
-  if(word1.indexOf(word2[i]) < 0){
-    return false
-  }
+const mutate = (word1, word2) =>{
+let w1 = word1[0].toLowerCase().split("").sort().join("")
+let w2 = word2[0].toLowerCase().split("").sort().join("")
+return w1 == w2 ? true : false
 }
-return true
+
+console.log(mutate(['hello'], ['Hello']))

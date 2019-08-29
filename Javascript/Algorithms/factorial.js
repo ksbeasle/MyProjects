@@ -1,17 +1,16 @@
 function factorialize(num) {
-    /* start at 1 */
-    var factNum = 1;
-    
-    /* if the number passed is 0 we return 1 */
-    if(num === 0){
-      return 1
-    }else{
-    /* loop up to the number passed and multiply it */
-    for(let i = 1; i <= num; i++){
-      factNum = factNum * i;
-    }
-    }
-     return factNum;
-   }
-   
-   console.log(factorialize(5));
+  //set x to 1 so we dont have to worry about multiplying by 0 on the first iteration
+  let x = 1
+  
+  do{
+      //as long as num doesnt equal zero we can calculate
+      if(num != 0){
+        x *= num
+        num--
+      }
+   }while(num != 0)
+   console.log(x)
+   return x
+  }
+  factorialize(5)
+  console.log(5*4*3*2*1)

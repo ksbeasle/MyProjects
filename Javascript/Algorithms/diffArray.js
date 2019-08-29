@@ -34,3 +34,4 @@ function diffArray(arr1, arr2) {
   console.log(diffArray(["andesite", "grass", "dirt", "dead shrub"], ["andesite", "grass", "dirt", "dead shrub"]))
   console.log(diffArray([1, "calf", 3, "piglet"], [1, "calf", 3, 4]))
   
+  
