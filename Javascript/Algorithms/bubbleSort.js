@@ -3,7 +3,7 @@ let arr = [3,1,6,1,2,9]
 
 
 
-const bubbleSort = (arr) =>{
+const bubbleSort = (arr) => {
     let swapMe = true
     do{ 
         swapMe = false

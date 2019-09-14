@@ -4,14 +4,9 @@ Essentially, rearrange the digits to create the highest possible number.
 */
 
 
-function descendingOrder(n){
-    let num = 0
-    let str = n.toString()
-    let split = str.split("")
-    let sort = split.sort()
-    let rev = sort.reverse()
-    let join = rev.join("")
-    num = parseInt(join)
+function descendingOrder(n){  
+    let x = n.toString().split("").sort().reverse().join("")
+    let num = parseInt(x)
     console.log(num)
     return num
    }

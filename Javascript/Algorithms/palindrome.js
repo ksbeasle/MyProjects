@@ -12,6 +12,8 @@ function palindrome(str) {
       revStr += str[i]
     }
     /* compare */
+    //console.log(str)
+    //console.log(revStr)
      if(revStr === str){
        return true
      }

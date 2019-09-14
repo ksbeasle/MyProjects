@@ -8,7 +8,7 @@ another set of integer this time in a set of {4} to have the proper format for a
 */
 const phoneValidation = /\^?([0-9]{3})?[-.]?([0-9]{3})[-.]?([0-9]{4})$/;
 
-isValid = (phoneNumber) => {
+const isValid = (phoneNumber) => {
     if(phoneNumber.match(phoneValidation)){
         return true;
     }else{

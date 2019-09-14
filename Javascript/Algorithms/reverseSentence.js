@@ -15,7 +15,7 @@ function reverseWords(str) {
     revWord = revWord.join("")
     
     let revStr = revWord.slice(0,revWord.length-1)
-   
+   console.log(revWord)
     return revStr
   }
   

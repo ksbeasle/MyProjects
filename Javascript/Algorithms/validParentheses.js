@@ -36,4 +36,5 @@ function validParentheses(parens){
   console.log(validParentheses("()()()()()()()(())()()()()")) //true
   console.log(validParentheses("(()()))(")) //false
   console.log(validParentheses(")(()))")) //false
+  //console.log(validParentheses("(())()()))((()")) 
   
