@@ -163,3 +163,15 @@ java.lang.NullPointerException
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-03 14:41:23.429
 !MESSAGE executing callback sts4.classpath.BdOOLIbZ SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-03 14:59:17.284
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.BdOOLIbZ
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-03 14:59:17.291
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.BdOOLIbZ
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-03 14:59:17.292
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-03 14:59:17.294
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.BdOOLIbZ => OK
